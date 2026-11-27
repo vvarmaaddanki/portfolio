@@ -1,9 +1,10 @@
-'use me';
+
 'use client';
 
 import React, { useState } from 'react';
 import { PROJECTS, OPEN_SOURCE, Project } from '@/data/portfolioData';
-import { Layers, Github, ExternalLink, Code2, Cpu, CheckCircle2, Terminal, ChevronRight, GitPullRequest } from 'lucide-react';
+import { Layers, ExternalLink, Code2, Cpu, CheckCircle2, Terminal, ChevronRight, GitPullRequest } from 'lucide-react';
+import { GithubIcon } from '@/components/Icons';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState<string>('All');
@@ -133,7 +134,7 @@ export default function Projects() {
                     className="p-2 text-slate-400 hover:text-white bg-slate-900 rounded-lg border border-slate-800 hover:border-slate-700 transition-colors"
                     aria-label="GitHub Repository"
                   >
-                    <Github className="w-4 h-4" />
+                    <GithubIcon className="w-4 h-4" />
                   </a>
                 </div>
               </div>

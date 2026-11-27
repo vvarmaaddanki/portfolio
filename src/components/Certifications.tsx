@@ -1,9 +1,9 @@
-'use me';
+
 'use client';
 
 import React from 'react';
 import { CERTIFICATIONS } from '@/data/portfolioData';
-import { Award, Cloud, Cpu, Database, Zap, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Award, Cloud, Cpu, Database, Zap, ExternalLink, ShieldCheck, Download } from 'lucide-react';
 
 export default function Certifications() {
   const getIcon = (name: string) => {

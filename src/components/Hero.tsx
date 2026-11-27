@@ -1,10 +1,11 @@
-'use me';
+
 'use client';
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { PERSONAL_INFO } from '@/data/portfolioData';
-import { MapPin, Sparkles, ArrowRight, Download, Github, Linkedin, Mail, CheckCircle2, Terminal } from 'lucide-react';
+import { MapPin, Sparkles, ArrowRight, Download, Mail, CheckCircle2, Terminal } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '@/components/Icons';
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -196,7 +197,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-slate-400 hover:text-sky-400 transition-colors"
               >
-                <Github className="w-4 h-4" />
+                <GithubIcon className="w-4 h-4" />
                 <span className="font-mono">github/vvarmaaddanki</span>
               </a>
               <a
@@ -205,7 +206,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-slate-400 hover:text-sky-400 transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <LinkedinIcon className="w-4 h-4" />
                 <span className="font-mono">linkedin/in/vvarmaaddanki</span>
               </a>
             </div>

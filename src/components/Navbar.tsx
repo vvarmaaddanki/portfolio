@@ -1,9 +1,10 @@
-'use me';
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
-import { Menu, X, FileText, ArrowUpRight, Terminal, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, FileText, ArrowUpRight, Terminal, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '@/components/Icons';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -72,7 +73,7 @@ export default function Navbar() {
               aria-label="GitHub Profile"
               className="p-2 text-slate-400 hover:text-sky-400 hover:bg-slate-800/60 rounded-xl transition-colors"
             >
-              <Github className="w-5 h-5" />
+              <GithubIcon className="w-5 h-5" />
             </a>
             <a
               href={PERSONAL_INFO.linkedin}
@@ -81,7 +82,7 @@ export default function Navbar() {
               aria-label="LinkedIn Profile"
               className="p-2 text-slate-400 hover:text-sky-400 hover:bg-slate-800/60 rounded-xl transition-colors"
             >
-              <Linkedin className="w-5 h-5" />
+              <LinkedinIcon className="w-5 h-5" />
             </a>
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
@@ -119,10 +120,10 @@ export default function Navbar() {
           <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-white">
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
               </a>
               <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-white">
-                <Linkedin className="w-5 h-5" />
+                <LinkedinIcon className="w-5 h-5" />
               </a>
             </div>
             <a

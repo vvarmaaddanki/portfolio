@@ -1,9 +1,10 @@
-'use me';
+
 'use client';
 
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
-import { Mail, Send, Github, Linkedin, Copy, CheckCircle2, ArrowRight, MessageSquare, MapPin, Phone } from 'lucide-react';
+import { Mail, Send, Copy, CheckCircle2, ArrowRight, MessageSquare, MapPin, Phone } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '@/components/Icons';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -89,7 +90,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-600 transition-all"
                 >
-                  <Github className="w-4 h-4" />
+                  <GithubIcon className="w-4 h-4" />
                   <span className="text-sm font-medium">GitHub</span>
                 </a>
                 <a
@@ -98,7 +99,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-600 transition-all"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <LinkedinIcon className="w-4 h-4" />
                   <span className="text-sm font-medium">LinkedIn</span>
                 </a>
               </div>

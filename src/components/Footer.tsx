@@ -1,11 +1,17 @@
-'use me';
+
 'use client';
 
 import React from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
-import { Terminal, Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Terminal, Mail, Heart } from 'lucide-react';
 
 export default function Footer() {
+  const [year, setYear] = React.useState<number | null>(null);
+
+  React.useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-[#06090f] border-t border-slate-800/80 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +33,7 @@ export default function Footer() {
           {/* Copyright & Human-crafted note */}
           <div className="text-center md:text-right">
             <p className="text-xs text-slate-400 font-mono">
-              © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
+              © {year || 2026} {PERSONAL_INFO.name}. All rights reserved.
             </p>
             <p className="text-[11px] text-slate-500 mt-1 font-mono">
               Designed with precision for recruiters & hiring managers.
