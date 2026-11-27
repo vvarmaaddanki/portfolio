@@ -1,9 +1,8 @@
-
 'use client';
 
 import React from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
-import { Terminal, Mail, Heart } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 export default function Footer() {
   const [year, setYear] = React.useState<number | null>(null);
@@ -13,19 +12,17 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#06090f] border-t border-slate-800/80 py-12">
+    <footer className="bg-slate-900 text-slate-100 border-t border-slate-800 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
           {/* Brand Info */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 p-[1px]">
-              <div className="w-full h-full bg-[#090d16] rounded-[11px] flex items-center justify-center">
-                <Terminal className="w-4 h-4 text-sky-400" />
-              </div>
+            <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm">
+              <Terminal className="w-4 h-4" />
             </div>
             <div>
-              <p className="font-bold text-slate-100 text-sm">{PERSONAL_INFO.name}</p>
+              <p className="font-bold text-white text-sm">{PERSONAL_INFO.name}</p>
               <p className="text-xs text-slate-400 font-mono">Software Engineer | Python & Full-Stack</p>
             </div>
           </div>
